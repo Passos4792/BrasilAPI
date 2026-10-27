@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feriados Nacionais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Feriados Nacionais</h1>
+        <p>Consulte os feriados nacionais de um ano.</p>
+        <form id="formulario" class="busca" novalidate>
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" placeholder="Ano" step="1" required>
+            <button id="btnConsultar" type="submit">Consultar</button>
+        </form>
+        <p id="mensagem" role="status" aria-live="polite"></p>
+        <p id="total"></p>
+        <div id="proximo" aria-live="polite" hidden></div>
+        <p class="legenda">As linhas em amarelo indicam feriados no sábado ou domingo.</p>
+        <div class="tabela-container">
+            <table>
+                <caption>Feriados do ano consultado</caption>
+                <thead><tr><th scope="col">Data</th><th scope="col">Dia da semana</th><th scope="col">Feriado</th></tr></thead>
+                <tbody id="tabelaFeriados"></tbody>
+            </table>
+        </div>
+        <p class="fonte">Dados: <a href="https://brasilapi.com.br/" target="_blank" rel="noopener noreferrer">BrasilAPI</a></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
